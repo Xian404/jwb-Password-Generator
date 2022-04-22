@@ -19,6 +19,30 @@ let specialChara = ['!','@','#','$','%','*','?','/','=','-','+','_','(',')']
 function generatePassword () {
   let options = getPasswordOptions ()
   console.log(options);
+  let possibleChara = []  // master list of possible characters - may not be able to effeciently randomize this
+  
+  
+  if (options.chooseUpper) {
+    possibleChara = possibleCharacter.concat(alphaUpper) // combing upper case characters into array
+  }
+
+  if (options.chooseLower) {
+    possibleChara = possibleCharacter.concat(alphaLower) // combining lower case characters into array
+  }
+  
+  if (options.chooseNum) {
+    possibleChara = possibleCharacter.concat(numberChara)  // combining number characters into array
+  }
+
+  if (options.chooseSpec) {
+    possibleChara = possibleCharacter.concat(specialChara)  // combining number characters into array
+  }
+
+
+for (let index = 0; index < options.chooseChar; index++) {
+  const element = array[index];
+  
+}
 }
 
 function getPasswordOptions () {
@@ -30,10 +54,14 @@ function getPasswordOptions () {
   
 
 
- let chooseNum = confirm('Do you want your password to contain numbers?')
+  let chooseNum = confirm('Do you want your password to contain numbers?')
   let chooseUpper = confirm('Do you want you password to contain Upper Case letters?')
   let chooseLower = confirm('Do you want your password to contain lower case letters?')
   let chooseSpec = confirm('Do you want your password to contain special characters?')
+
+
+
+
   
   let passwordOptions = {
     chooseChar: chooseChar,
