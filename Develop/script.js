@@ -16,22 +16,36 @@ let specialChara = ['!','@','#','$','%','*','?','/','=','-','+','_','(',')']
 
 
 // Setting first criteria of character length for password
+function generatePassword () {
+  let options = getPasswordOptions ()
+  console.log(options);
+}
 
-generateBtn.addEventListener("click", function () {
+function getPasswordOptions () {
+ let chooseChar = prompt('How many characters would you like your password to be?')
+  if (chooseChar < 8) {
+    alert('Value must be greater than or equal to 8');
+    return null;
+  } 
+  
 
 
-})
+ let chooseNum = confirm('Do you want your password to contain numbers?')
+  let chooseUpper = confirm('Do you want you password to contain Upper Case letters?')
+  let chooseLower = confirm('Do you want your password to contain lower case letters?')
+  let chooseSpec = confirm('Do you want your password to contain special characters?')
+  
+  let passwordOptions = {
+    chooseChar: chooseChar,
+    chooseNum: chooseNum,
+    chooseUpper: chooseUpper,
+    chooseLower: chooseLower,
+    chooseSpec: chooseSpec
+  }
+  return passwordOptions
+} 
 
 
-prompt('How many characters would you like your password to be?')
-
-
-
-
-prompt('Do you want your password to contain numbers?')
-prompt('Do you want you password to contain Upper Case letters?')
-prompt('Do you want your password to contain lower case letters?')
-prompt('Do you want your password to contain special characters?')
 
 
 
