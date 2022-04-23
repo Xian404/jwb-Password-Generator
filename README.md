@@ -14,9 +14,18 @@ This project was a homework assignment through the northwestern U fullstack boot
 
 Poject can be used by opening the file in your browswer and executing using the "generate password" button. Screenshot follows below.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Main Page
+
+![password generator demo](assets/03-javascript-homework-demo.png)
+
+    First prompt asking for password character length
+
+![password first prompt](assets/demo-prompt1.png)
+
+    Next prompt asking confirmation if password will contain numbers
+
+![password second prompt asking for password criteria](assets/demo-prompt2.png)
+
 
 ## Credits
 
